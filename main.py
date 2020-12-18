@@ -1,5 +1,5 @@
-import requests
+from indeed import extract_indeed_pages, extract_indeed_jobs
 
-indeed_result = requests.get("https://www.indeed.com/jobs?q=python&limit=50")
+max_indeed_pages = extract_indeed_pages()
 
-print(indeed_result)
+indeed_jobs = extract_indeed_jobs(max_indeed_pages)
